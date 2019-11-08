@@ -20,8 +20,20 @@ def square(x, y, side1, color):
     pass
   # я тут пишу функцию рисования квадрата с координатами (правый верхний угол) x, y, и стороной side1
 
-def rhom(x, y, side1, side2, color):
-    pass
+def rhom(x, y, side, angle, angle_of_rotation, color):
+        turtle.up()
+    turtle.goto(x,y)
+    turtle.down()
+    turtle.color(color)
+    turtle.begin_fill()
+    turtle.right(angle_of_rotation)
+    for _ in range(2):
+        turtle.forward(side)
+        turtle.right(180 + angle)
+        turtle.forward(side)
+        turtle.right(360 - angle)
+    turtle.left(angle)
+    turtle.end_fill()
   # Дима, тут ты пишешь функцию рисования ромба с координатами (правый верхний угол) x, y, и сторонами side1, side2
   
 def trap(x, y, side1, side2, side3, color):
