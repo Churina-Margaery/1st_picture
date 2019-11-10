@@ -21,7 +21,7 @@ def square(x, y, side1, color):
   # я тут пишу функцию рисования квадрата с координатами (правый верхний угол) x, y, и стороной side1
 
 def rhom(x, y, side, angle, angle_of_rotation, color):
-        turtle.up()
+    turtle.up()
     turtle.goto(x,y)
     turtle.down()
     turtle.color(color)
@@ -34,11 +34,24 @@ def rhom(x, y, side, angle, angle_of_rotation, color):
         turtle.right(360 - angle)
     turtle.left(angle)
     turtle.end_fill()
-  # Дима, тут ты пишешь функцию рисования ромба с координатами (правый верхний угол) x, y, и сторонами side1, side2
+  # где x и y - координаты, side - сторона ромба, angle - один из углов ромба, angle_of_rotation - на сколько повернуть фигуру
   
-def trap(x, y, side1, side2, side3, color):
-    pass
-  # Дима, тут ты пишешь функцию рисования трапеции с координатами (правый верхний угол)  x, y, и основаниями side1, side2, боковой стороной - side3
+def trap(x, y, bigger_base, side, angle, angle_of_rotation, color):
+    turtle.up()
+    turtle.goto(x, y)
+    turtle.down()
+    turtle.color(color)
+    turtle.begin_fill()
+    turtle.right(angle_of_rotation)
+    turtle.forward(bigger_base)
+    turtle.left(180 - angle)
+    turtle.forward(side)
+    turtle.left(angle)
+    turtle.forward(bigger_base - 2*math.cos(math.radians(angle))*side)
+    turtle.left(angle)
+    turtle.forward(side)
+    turtle.end_fill()
+  # где x и y - координаты, bigger_base - большее основание трапеции, side - боковая сторона трапеции, angle - угол между ними, angle_of_rotation - на сколько повернуть фигуру
 
     
     
