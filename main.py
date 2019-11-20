@@ -7,7 +7,18 @@
 import turtle
 
 def rect(x, y, side1, side2, angle_of_rotation, color):
-    pass
+    turtle.up()
+    turtle.goto(x, y)
+    turtle.down()
+    turtle.color(color)
+    turtle.begin_fill()
+    turtle.right(angle_of_rotation)
+    for _ in range(2):
+        turtle.forward(side1)
+        turtle.right(90)
+        turtle.forward(side2)
+        turtle.right(90)
+        turtle.end_fill()
 
 
 # Симон, тут ты пишешь функцию рисования прямоугольника с координатами (правый верхний угол) x, y, и сторонами side1, side2 и углом поворота
