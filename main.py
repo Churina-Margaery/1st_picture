@@ -7,12 +7,23 @@
 import turtle
 import math
 
-def trian(x, y, side1, side2, side3, color):
-    pass
-  # Симон, тут ты пишешь функцию рисования треугольника с координатами (правый верхний угол) x, y, и сторонами side1, side2, side3
+def trian(x, y, side1, side2, side3, angle_of_rotation, a1, a2, a3, color):
+    turtle.up()
+    turtle.goto(x, y)
+    turtle.down()
+    turtle.color(color)
+    turtle.begin_fill()
+    turtle.right(angle_of_rotation)
+    turtle.forward(side1)
+    turtle.right(a1)
+    turtle.forward(side2)
+    turtle.right(a2)
+    turtle.forward(side3)
+    turtle.right(a3)
+    turtle.end_fill()
+
 
 def rect(x, y, side1, side2, angle_of_rotation, color):
-    pass
     turtle.up()
     turtle.goto(x, y)
     turtle.down()
@@ -53,7 +64,6 @@ def square(x, y, side, angle_of_rotation, color):
     turtle.end_fill()
 
 def rhom(x, y, side, angle, angle_of_rotation, color):
-    turtle.up()
     turtle.up()
     turtle.goto(x,y)
     turtle.down()
