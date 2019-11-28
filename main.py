@@ -7,7 +7,7 @@
 import turtle
 import math
 
-def trian(x, y, side1, side2, side3, angle_of_rotation, a1, a2, a3, color):
+def trian(x, y, side1, side2, side3, angle_of_rotation, color):
     turtle.up()
     turtle.goto(x, y)
     turtle.down()
@@ -15,11 +15,11 @@ def trian(x, y, side1, side2, side3, angle_of_rotation, a1, a2, a3, color):
     turtle.begin_fill()
     turtle.right(angle_of_rotation)
     turtle.forward(side1)
-    turtle.right(a1)
+    turtle.right(180 - math.degrees(math.acos((side1**2+side2**2-side3**2)/2/side1/side2)))
     turtle.forward(side2)
-    turtle.right(a2)
+    turtle.right(180 - math.degrees(math.acos((side2**2+side3**2-side1**2)/2/side2/side3)))
     turtle.forward(side3)
-    turtle.right(a3)
+    turtle.right(180 - math.degrees(math.acos((side3**2+side1**2-side2**2)/2/side3/side1)))
     turtle.end_fill()
 
 
