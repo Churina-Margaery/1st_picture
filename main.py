@@ -22,7 +22,6 @@ def trian(x, y, side1, side2, side3, angle_of_rotation, color):
     turtle.right(180 - math.degrees(math.acos((side3**2+side1**2-side2**2)/2/side3/side1)))
     turtle.end_fill()
 
-
 def rect(x, y, side1, side2, angle_of_rotation, color):
     turtle.up()
     turtle.goto(x, y)
@@ -35,7 +34,7 @@ def rect(x, y, side1, side2, angle_of_rotation, color):
         turtle.right(90)
         turtle.forward(side2)
         turtle.right(90)
-        turtle.end_fill()
+    turtle.end_fill()
 
 
 def circ(x, y, side, color):
@@ -57,7 +56,6 @@ def square(x, y, side, angle_of_rotation, color):
     turtle.color(color)
     turtle.begin_fill()
     turtle.right(angle_of_rotation)
-    turtle.forward(side)
     for _ in range(4):
         turtle.forward(side)
         turtle.right(90)
@@ -67,9 +65,14 @@ def rhom(x, y, side, angle, angle_of_rotation, color):
     turtle.up()
     turtle.goto(x,y)
     turtle.down()
+    turtle.right(angle_of_rotation)
     turtle.color(color)
-    turtle.right(360 - angle)
-    turtle.left(angle)
+    turtle.begin_fill()
+    for _ in range(2):
+        turtle.forward(side)
+        turtle.right(180 - angle)
+        turtle.forward(side)
+        turtle.right(angle)
     turtle.end_fill()
 
 
@@ -89,7 +92,6 @@ def trap(x, y, bigger_base, side, angle, angle_of_rotation, color):
     turtle.forward(side)
     turtle.end_fill()
 
-
 # картинки
 def house(f1, f2):
     pass # (Симон)
@@ -101,15 +103,29 @@ def fish(f1, f2):
     pass  # (Симон)
 
 
-def ship(f1, f2):
-    pass # (Дима)
-    pass  # (Дима)
+# кораблик
 
 
-def Catepilar(f1, f2, f3, f4, f5):
-    pass # (Дима)
-    pass  # (Дима)
+trap(-300,-300,300,100,60,180,"blue")
+circ(-475,-325,20,"white")
+circ(-425,-325,10,"white")
+circ(-395,-325,10,"white")
+rect(-350,-300,200,5,-30,"brown")
+trian(-345,-100,100,60,80,180 - math.degrees(math.acos((40**2+50**2-30**2)/2/50/40)),"green")
+rect(-475,-300,100,5,180 + math.degrees(math.acos((40**2+50**2-30**2)/2/50/40)),"brown")
+trian(-470,-200,50,30,40,180 - math.degrees(math.acos((40**2+50**2-30**2)/2/50/40)),"yellow")
+turtle.left(math.degrees(math.acos((40**2+50**2-30**2)/2/50/40)))
 
+
+# гусеница
+
+x = -100
+for _ in range(4):
+    circ(x,300,40,"green")
+    x += 80
+circ(215,330,40,"green")
+rhom(205,375,20,60,135,"black")
+rhom(160,375,20,60,160,"black")
 
 def tree(f1, f2, f3):
     pass # (Я)
