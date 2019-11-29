@@ -97,7 +97,7 @@ def trap(x, y, bigger_base, side, angle, angle_of_rotation, color):
     turtle.forward(side)
     turtle.end_fill()
 
-
+turtle.speed(5000)
 # картинки
 
 def house(f1, f2):
@@ -108,7 +108,6 @@ def house(f1, f2):
 def fish(f1, f2):
     pass # (Симон)
     pass  # (Симон)
-
 
 # кораблик
 trap(-300, -300, 300, 100, 60, 180, "blue")
@@ -123,7 +122,6 @@ rect(-475, -300, 100, 5, 180 + math.degrees(math.acos(
 trian(-470, -200, 50, 30, 40, 180 - math.degrees(math.acos(
     (40 ** 2 + 50 ** 2 - 30 ** 2) / 2 / 50 / 40)), "yellow")
 turtle.left(math.degrees(math.acos((40 ** 2 + 50 ** 2 - 30 ** 2) / 2 / 50 / 40)))
-
 
 # гусеница
 x = -100
@@ -141,11 +139,13 @@ circ(-66, -10, 5, "red")
 circ(-49, -3, 5, "red")
 circ(-80, -20, 5, "red")
 circ(-98, 3, 5, "red")
-rect(-80, -65, 150, 10, 140, "brown")
+rect(-80, -65, 150, 10, 139, "brown")
 
 # корона
-rect(150, 0, 40, 100, 0, "yellow")
-trian(150, 0, 35, 20, 20, 90, "red")
-trian(120, 0, 35, 20, 20, 0, "green")
-trian(90, 0, 35, 20, 20, 360, "blue")
+rect(160, 0, 40, 105, 0, "orange")
+trian(160, 0, 35, 30, 30, 90, "orange")
+trian(125, 0, 35, 30, 30, 0, "orange")
+trian(90, 0, 35, 30, 30, 360, "orange")
 circ(110, - 10, 5, "red")
+
+turtle.done()
