@@ -97,55 +97,44 @@ def trap(x, y, bigger_base, side, angle, angle_of_rotation, color):
     turtle.forward(side)
     turtle.end_fill()
 
-turtle.speed(5000)
+
+turtle.speed(50000)
+
 # картинки
 
-def house(f1, f2):
-    pass # (Симон)
-    pass  # (Симон)
+turtle.bgcolor("lightcyan")
 
-
-def fish(f1, f2):
-    pass # (Симон)
-    pass  # (Симон)
-
-# кораблик
-trap(-300, -300, 300, 100, 60, 180, "blue")
-circ(-475, -325, 20, "white")
-circ(-425, -325, 10, "white")
-circ(-395, -325, 10, "white")
-rect(-350, -300, 200, 5, -30, "brown")
+# корабль (Дима)
+trap(-300, -300, 300, 100, 60, 180, "darkblue")
+circ(-475, -325, 20, "deepskyblue")
+circ(-425, -325, 10, "deepskyblue")
+circ(-395, -325, 10, "deepskyblue")
+rect(-350, -300, 200, 5, -30, "saddlebrown")
 trian(-345, -100, 100, 60, 80, 180 - math.degrees(math.acos(
-    (40 ** 2 + 50 ** 2 - 30 ** 2) / 2 / 50 / 40)), "green")
+    (40 ** 2 + 50 ** 2 - 30 ** 2) / 2 / 50 / 40)), "orangered")
 rect(-475, -300, 100, 5, 180 + math.degrees(math.acos(
-    (40 ** 2 + 50 ** 2 - 30 ** 2) / 2 / 50 / 40)), "brown")
+    (40 ** 2 + 50 ** 2 - 30 ** 2) / 2 / 50 / 40)), "saddlebrown")
 trian(-470, -200, 50, 30, 40, 180 - math.degrees(math.acos(
-    (40 ** 2 + 50 ** 2 - 30 ** 2) / 2 / 50 / 40)), "yellow")
-turtle.left(math.degrees(math.acos((40 ** 2 + 50 ** 2 - 30 ** 2) / 2 / 50 / 40)))
+    (40 ** 2 + 50 ** 2 - 30 ** 2) / 2 / 50 / 40)), "orangered")
+turtle.right(math.degrees(math.acos((40 ** 2 + 50 ** 2 - 30 ** 2) / 2 / 50 / 40)))
 
-# гусеница
-x = -100
-for _ in range(4):
-    circ(x,300,40,"green")
-    x += 80
-circ(215,330,40,"green")
-rhom(205,375,20,60,135,"black")
-rhom(160,375,20,60,160,"black")
-
-# дерево
-circ(0, 0, 50, "green")
-circ(-72, 30, 5, "red")
-circ(-66, -10, 5, "red")
-circ(-49, -3, 5, "red")
-circ(-80, -20, 5, "red")
-circ(-98, 3, 5, "red")
-rect(-80, -65, 150, 10, 139, "brown")
-
-# корона
-rect(160, 0, 40, 105, 0, "orange")
-trian(160, 0, 35, 30, 30, 90, "orange")
-trian(125, 0, 35, 30, 30, 0, "orange")
-trian(90, 0, 35, 30, 30, 360, "orange")
-circ(110, - 10, 5, "red")
+# конфета (Дима)
+circ(100,300,40,"lightseagreen")
+trian(110, 300, 60, 60, 60, -50, "mediumpurple")
+rect(110, 300, 55, 0.5, 10, "indigo")
+rect(110, 300, 52.5, 0.5, 10, "indigo")
+rect(110, 300, 51, 0.5, 10, "indigo")
+rect(110, 300, 52.5, 0.5, 10, "indigo")
+rect(110, 300, 55, 0.5, 10, "indigo")
+turtle.left(50)
+trian(30, 300, 60, 60, 60, 190, "mediumpurple")
+rect(30, 300, 55, 0.5, 10, "indigo")
+rect(30, 300, 52.5, 0.5, 10, "indigo")
+rect(30, 300, 51, 0.5, 10, "indigo")
+rect(30, 300, 52.5, 0.5, 10, "indigo")
+rect(30, 300, 55, 0.5, 10, "indigo")
+circ(122, 365, 35, "khaki")
+turtle.right(105)
 
 turtle.done()
+
